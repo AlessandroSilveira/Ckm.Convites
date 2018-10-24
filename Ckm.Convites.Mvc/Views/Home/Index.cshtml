@@ -1,0 +1,175 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Grupo Makiyama</title>
+    <meta content="Grupo Makiyama" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="~/Content/webflow.css" rel="stylesheet" />
+    <script src="~/Scripts/webfont.js"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+            }
+        });
+    </script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-mascara-numerica.js"></script>
+    <script src="~/Scripts/meiomask.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script scr="~/Scripts/Convite.js"></script>
+
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+            }
+        });
+
+        $(document).ready(function () {
+            $("#salvar").click(function () {
+                var nome = $("#Nome").val();
+                var email = $("#Email").val();
+                var telefone = $("#Telefone").val();
+
+                var data = {
+                    Nome: nome,
+                    Email: email,
+                    Telefone: telefone,
+                    Cpf: ""
+                };
+
+                $.ajax({
+                    url: '/Pessoa/Post',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    dataType : "json",
+                    data: JSON.stringify(data)
+                })
+                    .done($(".w-form-done-Sucesso").show())
+                    .fail($(".w-form-fail-falha").show());
+            });
+        });
+
+        
+
+      
+
+       
+
+       
+
+
+    </script>
+
+    <style>
+        .w-slider-nav-invert > div.w-active {
+            background-color: #31aae2;
+            !important;
+        }
+
+        .w-slider-nav-invert > div {
+            background-color: #e5e5e5;
+            !important;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbarcorreto w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="800">
+        <div class="navbarcorretocontainer w-container">
+            <a class="w-nav-brand" href="Index.html">
+                <img style="width:120px" src="~/Content/img/Grupo Makiyama.png" />
+            </a><nav class="navmenucorreto w-nav-menu" role="navigation">
+                <a class="nav-link navlinkcorreto navlinkfinal w-nav-link" href="Index.html">Convites</a>
+             </nav>
+            <div class="w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-wrapper w-clearfix">
+        <div class="form-part" data-ix="move-contact">
+            <a class="w-inline-block x-button" data-ix="hide-contact" href="#"></a>
+            <div class="contact-text">
+                <h5>Entre em contato!</h5>
+                <p>Preencha os campos abaixo.</p>
+            </div>
+            <div class="w-form">
+                <form data-name="Email Form" id="email-form" name="email-form">
+                    <label class="field-label" for="name">Nome:</label><input class="text-field w-input" data-name="Name" id="name" maxlength="256" name="name" type="text"><label class="field-label" for="email">E-mail:</label><input class="text-field w-input" data-name="Email" id="email" maxlength="256" name="email" required="required" type="email"><label class="field-label" for="field">Mensagem:</label><textarea class="text-area text-field w-input" id="field" maxlength="5000" name="field"></textarea><input class="button submit w-button" data-wait="Por favor, espere..." type="submit" value="Enviar" wait="Por favor, espere...">
+                </form>
+                <div class="form-msg w-form-done">
+                    <p class="s">Thank you! Your submission has been received!</p>
+                </div>
+                <div class="form-msg w-form-fail">
+                    <p class="form-p">Oops! Something went wrong while submitting the form :(</p>
+                </div>
+            </div>
+        </div>
+        <a class="contact w-inline-block" data-ix="show-contact" href="#"></a>
+    </div>
+    <div class="banner" id="top">
+           
+     </div>
+    <div class="d-line section">
+        <div class="w-container" id="CursosEhFormacao">
+
+            <div class="politica-de-privacidade politica-de-privacidade-2">
+                <strong data-new-link="true">
+                    <a id='cursoformacao'></a>CADASTRE-SE PARA RECEBER O CONVITE
+                </strong>
+            </div>
+            <p class="paragraph-center">
+                @*ÁREA DE ESPECIALIZAÇÃO:&nbsp;&nbsp;AVALIAÇÃO DE POTENCIAL,&nbsp;AVALIAÇÕES DE COMPETENCIA<br>
+                E&nbsp;POTENCIAL PARA DESENVOLVIMENTO.*@
+            </p>
+        </div>
+        <div class="w-container">
+            <div class="w-form">
+
+                <form class="form-hidden-object" data-name="Currículo de Consultores - Certificados pelo Grupo Makiyama" id="wf-form-Curr-culo-de-Consultores---Certificados-pelo-Grupo-Makiyama" name="wf-form-Curr-culo-de-Consultores---Certificados-pelo-Grupo-Makiyama">
+
+                    
+                    <div class="w-col-6">
+                        <div class="panel panel-danger" style="margin-bottom: -19px;">
+                            <div class="panel-heading"><b>Por favor preencher todos os campos marcados com *</b></div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <label class="label" for="Nome">Nome:</label><span class="span-obrigatorio"><b> *</b></span>
+                    <input class="w-input" data-name="Nome" id="Nome" maxlength="256" name="Nome" placeholder="Digite seu nome" required="required" type="text">
+                    <label class="label" for="Email">Email:</label><span class="span-obrigatorio"><b> *</b></span>
+                    <input class="w-input" data-name="Email" id="Email" maxlength="256" name="Email" placeholder="Digite seu email" required="required" type="email">
+                    <div class="w-row">
+                        <div class="w-col w-col-6">
+                            <label class="label" for="Telefone">Telefone:</label><span class="span-obrigatorio"><b> *</b></span>
+                            <input class="w-input" data-name="Telefone" id="Telefone" maxlength="10" name="Telefone" placeholder="Digite seu telefone" required="required" type="text">
+                        </div>                       
+                    </div>                   
+                    <input id="salvar" class="w-button" data-wait="Por favor, espere..." type="button" value="CADASTRE-SE" wait="Por favor, espere...">
+                </form>
+
+                <div style="display: none" class="w-form-done-Sucesso">
+                    <p>Obrigado! Seu cadastro foi realizado com sucesso!</p>
+                </div>
+                <div style="display: none" class="w-form-fail-falha">
+                    <p>Oops! Parece que algo deu errado.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="div-center w-container">
+            <div class="w-row">
+                @*<div class="column_button_adjust w-col w-col-6"><a style="font-size: 16px; padding: 10px" class="adjust_button_2 button button_adjust-size divcenter" href="http://makiyama.net.br/Ckm/Consultores/CurriculosConsultores" target="_blank">MINI-CURRÍCULO DOS PROFISSIONAIS CERTIFICADOS PELO GRUPO MAKIYAMA</a></div>
+                <div class="column_button_adjust w-col w-col-6"><a style="font-size: 16px; padding: 20px 10px" class="button button_adjust-size divcenter" data-ix="show-text-14" href="http://makiyama.net.br/Ckm/Home/ConsultaCertificado" target="_blank">IMPRIMA AQUI SEU&nbsp;CERTIFICADO DE&nbsp;FORMAÇÃO</a><br /></div>*@
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/webflow2.js"></script>
+</body>
+</html>
