@@ -1726,7 +1726,7 @@ textarea.w-input, textarea.w-select {
 
 .w-nav-menu {
     position: relative;
-    float: right
+    float: left
 }
 
 .w--nav-menu-open {

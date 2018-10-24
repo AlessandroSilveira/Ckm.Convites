@@ -21,7 +21,7 @@ namespace Ckm.Convites.Repository
                 parameters.Add("@Nome", pessoa.Nome);
                 parameters.Add("@Telefone", pessoa.Telefone);
                 parameters.Add("@Email", pessoa.Email);
-                parameters.Add("@Cpf", pessoa.Cpf);
+                //parameters.Add("@Cpf", pessoa.Cpf);
                 parameters.Add("@DataCadastro", DateTime.Now);
                 SqlMapper.Execute(con, "AddPessoa", param:parameters, commandType:StoredProcedure);
                 return true;
